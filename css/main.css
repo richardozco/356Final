@@ -1,0 +1,55 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+}
+
+#nav-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5em;
+
+    padding: 1em;
+
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#welcome-section {
+    margin: 1em;
+    text-align: center;
+}
+
+#welcome-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2em;
+
+    padding: 1em;
+
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+

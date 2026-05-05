@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c9c9c9;
+}
+
+.page-card {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #c9c9c9;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background-color: #202020;
+    color: white;
+    padding: 14px 35px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.site-logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+}
+
+.form-panel {
+    width: 68%;
+    background-color: #7478f6;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    padding: 45px 70px;
+}
+
+.form-panel h2 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.account-form {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.account-form label {
+    display: block;
+    background-color: white;
+    border-radius: 18px;
+    padding: 8px 14px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.account-form input {
+    width: 70%;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.account-form button {
+    display: block;
+    margin: 28px auto 0;
+    background-color: #75f06c;
+    border: none;
+    border-radius: 22px;
+    padding: 11px 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.image-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.top-icon {
+    font-size: 5rem;
+}
+
+.tree {
+    position: relative;
+    width: 260px;
+    text-align: center;
+}
+
+.node {
+    width: 55px;
+    height: 38px;
+    background-color: #7478f6;
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.main-node {
+    margin-bottom: 25px;
+}
+
+.line {
+    background-color: #7478f6;
+    position: absolute;
+}
+
+.vertical {
+    width: 6px;
+    height: 45px;
+    top: 38px;
+    left: 127px;
+}
+
+.horizontal {
+    height: 6px;
+    width: 200px;
+    top: 80px;
+    left: 30px;
+}
+
+.node-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px 0;
+}
+
+.mini-node {
+    width: 35px;
+    height: 22px;
+    background-color: #7478f6;
+    border-radius: 3px;
+}
+
+.site-footer {
+    background-color: #202020;
+    padding: 22px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
