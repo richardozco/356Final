@@ -12,9 +12,8 @@ require_once '../helpers/supabase.php';
 
 $supabase = initializeSupabase();
 
-//UNCOMMENT FOR PRODUCTION
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
 
 $showForm = true;
 
@@ -51,7 +50,6 @@ function sanitize($value) {
         else {
 
             try{
-                // TEST AFTER DB UPDATES WITH EVENT
                 $response = $supabase->from('event')->insert([
                     'event_name' => $eventName,
                     'event_capacity' => $eventCap,
@@ -59,6 +57,7 @@ function sanitize($value) {
                     'event_end_time' => $eventEndStamp,
                     'event_location' => $eventLoc,
                     'event_description' => $eventDesc,
+                    'event_current_status' => "p",
                     'user_id' => $data['organizer_id']
                 ])->execute();
 

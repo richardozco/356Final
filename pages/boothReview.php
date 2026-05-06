@@ -10,9 +10,9 @@ require_once '../helpers/supabase.php';
 $pageTitle = 'Booth Review';
 
 $supabase = initializeSupabase();
-//UNCOMMENT FOR PRODUCTION
-//checkLogin();
-//sessionTimer();
+
+checkLogin();
+sessionTimer();
 
 if(array_key_exists('user_id', $_SESSION)){
 $query = $supabase

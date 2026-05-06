@@ -12,9 +12,8 @@ require_once '../helpers/supabase.php';
 
 $supabase = initializeSupabase();
 
-//UNCOMMENT FOR PRODUCTION
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
 
 $showForm = true;
 

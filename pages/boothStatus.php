@@ -13,8 +13,8 @@ $pageTitle = "Your Submissions";
 
 $supabase = initializeSupabase();
 
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
 
     $proposals_query = $supabase
     ->from('booth')

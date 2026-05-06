@@ -11,9 +11,9 @@ require_once '../helpers/supabase.php';
 $pageTitle = 'Event Register';
 
 $supabase = initializeSupabase();
-//UNCOMMENT FOR PRODUCTION
-//checkLogin();
-//sessionTimer();
+
+checkLogin();
+sessionTimer();
 
 if(array_key_exists('user_id', $_SESSION)){
 $enroll_query = $supabase
@@ -50,11 +50,11 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 
 if(array_key_exists('user_id', $_SESSION)){
 
-    //SHOW ONLY EVENTS THAT ARE APPROVED LATER !!!!!
     $current_event_query = $supabase
                     ->from('event')
                     ->select('*')
                     ->order('event_start_time', ['ascending' => false])
+                    ->eq('event_current_status', "a")
                     ->execute();
 
     $data = parseQueryArray($current_event_query);
