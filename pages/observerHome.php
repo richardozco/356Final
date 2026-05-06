@@ -18,7 +18,6 @@ sessionTimer();
 $query = $supabase->query
          ->from('event')
          ->select('*')
-         //->gte('event_start_time', date('Y-m-d\TH:i:sP'))
          ->order('event_start_time', ['ascending' => true])
          ->execute();
 

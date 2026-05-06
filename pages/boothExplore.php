@@ -13,8 +13,8 @@ $pageTitle = "Explore Booths";
 
 $supabase = initializeSupabase();
 
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
 
 function sanitize($value) {
     return htmlspecialchars(stripslashes(trim($value)));

@@ -11,9 +11,8 @@ $pageTitle = "Your Submissions";
 
 $supabase = initializeSupabase();
 
-//UNCOMMMENT
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
 
     $proposals_query = $supabase
     ->from('event')
@@ -64,7 +63,6 @@ $supabase = initializeSupabase();
             <section class="layout-stack"> 
 
                 <?php
-                        // MAKE 'STATUS:' SECTION WHEN DB TEAM UPDATES
                         foreach($proposal as $event)
                         {
                             ?>

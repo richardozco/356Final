@@ -13,8 +13,8 @@ $pageTitle = "Your Submissions";
 
 $supabase = initializeSupabase();
 
-//checkLogin();
-//sessionTimer();
+checkLogin();
+sessionTimer();
    
     $current_event_query = $supabase->from('event')
                            ->select('event_id')
