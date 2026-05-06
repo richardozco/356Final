@@ -8,8 +8,8 @@ require_once '../helpers/sessionTimer.php';
 require_once '../helpers/header.php';
 
 //UNCOMMENT FOR PRODUCTION
-//checkLogin();
-//sessionTimer();
+// checkLogin();
+// sessionTimer();
 ?>
 
 <!DOCTYPE html>

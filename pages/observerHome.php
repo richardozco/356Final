@@ -37,6 +37,8 @@ $data = parseQuery($query);
           type="text/css" rel="stylesheet" />
     <link href="../css/styles.css"
           type="text/css" rel="stylesheet" />
+    <link href="../css/observer-home.css"
+      type="text/css" rel="stylesheet" />
 </head>
 <body>
 <!-- Header -->
@@ -73,7 +75,7 @@ $data = parseQuery($query);
         </p>
 
             <section class="hero-section">
-                <h1>Speaker Home</h1>
+                <h1>Observer Home</h1>
             </section>
 
             <!-- Main role / feature navigation based on your wireframe -->

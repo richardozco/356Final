@@ -51,6 +51,8 @@ if (array_key_exists('user_id', $_SESSION)) {
           type="text/css" rel="stylesheet" />
     <link href="../css/styles.css"
           type="text/css" rel="stylesheet" />
+    <link href="../css/admin-home.css"
+          type="text/css" rel="stylesheet" />
 </head>
 <body>
 <!-- Header -->
