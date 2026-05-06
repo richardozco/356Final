@@ -1,0 +1,126 @@
+/* ── Page-level overrides for signup ── */
+.form-panel h2 {
+    margin-bottom: 10px;
+}
+
+.form-subtitle {
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+}
+
+/* Inline first/last row */
+.name-row {
+    display: flex;
+    gap: 10px;
+}
+
+.name-row label {
+    flex: 1;
+}
+
+/* Password strength bar */
+#strength-bar-wrap {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
+    margin: -6px 0 10px;
+    overflow: hidden;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 4px;
+    transition: width 0.3s, background 0.3s;
+}
+
+/* Error / success feedback */
+.form-message {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.88rem;
+    min-height: 1.2rem;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    padding: 6px 12px;
+}
+
+.form-message.error {
+    background: rgba(255, 80, 80, .20);
+    color: #ffe0e0;
+}
+
+.form-message.success {
+    background: rgba(80, 255, 80, .20);
+    color: #d0ffd0;
+}
+
+/* "Already have an account?" link */
+.alt-link {
+    text-align: center;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.88rem;
+}
+
+.alt-link a {
+    color: #b5f5b0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alt-link a:hover {
+    text-decoration: underline;
+}
+
+/* Show-password toggle */
+.pw-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.pw-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 54px;
+    /* room for the eye button */
+}
+
+.toggle-pw {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    color: #777;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.toggle-pw:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: #333;
+}
+
+/* Submit button hover */
+.account-form button[type="submit"] {
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.account-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
