@@ -34,6 +34,7 @@ $data = parseQuery($query);
 
   <link rel="stylesheet" href="../css/main.css" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/welcome.css" />
 </head>
 <main>
 <?php

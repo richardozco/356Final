@@ -1,0 +1,94 @@
+main {
+    min-height: 100vh;
+    background-color: #7478f6;
+    padding-bottom: 90px;
+}
+
+/* Welcome title */
+main h1 {
+    color: white;
+    font-size: 2.8rem;
+    text-align: center;
+    padding-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Main welcome card */
+#welcome-section {
+    background-color: #202020;
+    color: white;
+
+    width: 90%;
+    max-width: 700px;
+
+    margin: 2rem auto;
+    padding: 2rem;
+
+    border-radius: 25px;
+    text-align: center;
+
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Subtitle */
+#welcome-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Role options layout */
+#welcome-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 1.5rem;
+
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Remove bullets */
+#welcome-options li {
+    list-style-type: none;
+}
+
+/* Buttons */
+#welcome-options a {
+    display: block;
+
+    background-color: #ffd678;
+    color: black;
+
+    text-decoration: none;
+
+    padding: 1.2rem;
+
+    border-radius: 16px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+#welcome-options a:hover {
+    background-color: #75f06c;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    #welcome-section h2 {
+        font-size: 1.5rem;
+    }
+
+    #welcome-options {
+        grid-template-columns: 1fr;
+    }
+}
