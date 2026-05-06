@@ -1,0 +1,155 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 2em;
+}
+
+#nav-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5em;
+
+    padding: 1em;
+
+    list-style-type: none;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d9d9d9;
+    color: #222;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-logo {
+    font-size: 1.8rem;
+}
+
+.account-actions a {
+    background-color: #6c63ff;
+    color: white;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.layout-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.card-slate-p,
+.card-slate-a,
+.card-slate-d {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 6px solid var(--accent-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+ 
+.card-slate-p { --accent-color: #6366f1; }
+.card-slate-a { --accent-color: #63f187; }
+.card-slate-d { --accent-color: #f55151; }
+
+
+.btn {
+    display: inline-block;
+    background-color: #ffd166;
+    color: black;
+    text-decoration: none;
+    padding: 0.55rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.info-section {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.info-section .layout-stack {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.site-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2f2f2f;
+    padding: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+}
+

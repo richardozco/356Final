@@ -41,9 +41,10 @@ $supabase = initializeSupabase();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
-    <link href="../css/main.css"
-          type="text/css" rel="stylesheet" />
-    <link href="../css/styles.css"
+
+    <!-- Changed to speakerStatus.css from main/styles-->
+
+    <link href="../css/status.css"
           type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -76,8 +77,16 @@ $supabase = initializeSupabase();
                         foreach($proposal as $form)
                         {
                             ?>
-                            <article class="card-slate">
-                            <h1>Status: <?= htmlentities($form['proposal_status'])?></h1>
+                            <article class="card-slate-<?=$form['proposal_status']?>">
+                            <h1>Status: <?php
+                            if (htmlentities($form['proposal_status']) == "p") {
+                                echo "Proposed";
+                            } else if (htmlentities($form['proposal_status']) == "d") {
+                                echo "Denied";
+                            } else {
+                                echo "Approved";
+                            }
+                            ?></h1>
                             <h2>Title: <?= htmlentities($form['proposal_name']) ?></h2>
                             <h3>Topic: <?= htmlentities($form['proposal_topic'])?></h3>
                             <p>Desc: <?= htmlentities($form['proposal_description'])?></p>

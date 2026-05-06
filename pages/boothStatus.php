@@ -38,9 +38,10 @@ $supabase = initializeSupabase();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
-    <link href="../css/main.css"
-          type="text/css" rel="stylesheet" />
-    <link href="../css/styles.css"
+    
+    <!-- Changed to boothStatus.css from main/styles -->
+    
+    <link href="../css/status.css"
           type="text/css" rel="stylesheet" />
 </head>
 <body>
@@ -73,10 +74,19 @@ $supabase = initializeSupabase();
                         foreach($proposal as $form)
                         {
                             ?>
-                            <article class="card-slate">
-                            <h1>Booth Building: <?= htmlentities($form['booth_building'])?></h1>
-                            <h2>Event: <?= htmlentities($form['event']['event_name']) ?></h2>
-                            <h3>Organization: <?= htmlentities($form['exhibitor_organization']['organization_name'])?></h3>
+                            <article class="card-slate-<?=$form['booth_current_status']?>">
+                            <h1>Status: <?php
+                            if (htmlentities($form['booth_current_status']) == "p") {
+                                echo "Proposed";
+                            } else if (htmlentities($form['booth_current_status']) == "d") {
+                                echo "Denied";
+                            } else {
+                                echo "Approved";
+                            }
+                            ?></h1>
+                            <h2>Booth Building: <?= htmlentities($form['booth_building'])?></h2>
+                            <h3>Event: <?= htmlentities($form['event']['event_name']) ?></h3>
+                            <h4>Organization: <?= htmlentities($form['exhibitor_organization']['organization_name'])?></h4>
                             <p>Desc: <?= htmlentities($form['description'])?></p>
                             </article>
                             <?php

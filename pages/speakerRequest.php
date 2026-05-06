@@ -53,7 +53,7 @@ function sanitize($value) {
                 $response = $supabase->from('proposal')->insert([
                     'speaker_id'=> $_SESSION['user_id'],
                     'event_id' => $event_id,
-                    'proposal_status' => 'Submitted',
+                    'proposal_status' => 'p',
                     'is_approved' => false,
                     'proposal_topic'=> $proposalTopic,
                     'proposal_name'=> $proposalTitle,
@@ -85,10 +85,13 @@ function sanitize($value) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?></title>
-    <link href="../css/main.css"
+
+
+    <!-- changed link to new css -->
+    <link href="../css/requests.css"
           type="text/css" rel="stylesheet" />
-    <link href="../css/styles.css"
-          type="text/css" rel="stylesheet" />
+
+
 </head>
 <body>
 <!-- Header -->

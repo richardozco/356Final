@@ -21,6 +21,7 @@ $org_name = null;
 $org_industry = null;
 $error = null;
 $data = null;
+$form = null;
 
 function sanitize($value) {
     return htmlspecialchars(stripslashes(trim($value)));

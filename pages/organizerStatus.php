@@ -68,7 +68,15 @@ $supabase = initializeSupabase();
                         foreach($proposal as $event)
                         {
                             ?>
-                            <article class="card-slate">
+                            <article class="card-slate-<?=$event['event_current_status']?>">
+                                <h1>Status: <?php
+                                if (htmlentities($event['event_current_status']) == "p") {
+                                    echo "Proposed";
+                                } else if (htmlentities($event['event_current_status']) == "d") {
+                                    echo "Denied";
+                                } else {
+                                    echo "Approved";
+                                } ?>
                                 <h2><?= htmlentities($event['event_name']) ?></h2>
                                 <p>Event Capacity: <?=  htmlentities($event['event_capacity'])?></p>
                                 <p>Start Date: <?=  htmlentities(formatTime($event['event_start_time']))?></p>
